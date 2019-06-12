@@ -15,13 +15,24 @@ $result = $conn->query($sql);
     <title>Document</title>
 </head>
 <body>
-<table>
+<table border=1>
     <thead>
-    <tbody>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Data cadastro</th>
+
     </thead>
+    <?php while($dados = $result->fetch_assoc()){ ?>
+    <tbody>
+    <td><?php echo $dados['ID_BANDAS';] ?></td>
+    <td><?php echo "<a href='http://localhost/projPHP/projeto-php/alterar.php'>Alterar</a>"; ?></td>
+    <td><?php echo "<a href='http://localhost/projPHP/projeto-php/Excluir.php'>Alterar</a>"; ?></td>
     </tbody>
-    
-    </table>
+
+    <?php } ?>    </table>
    
 </body>
 </html>
+
+
+
